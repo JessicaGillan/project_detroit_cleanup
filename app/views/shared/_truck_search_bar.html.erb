@@ -1,0 +1,11 @@
+<div class="row">
+  <%= form_tag food_stops_path, class: 'col-xs-12' do %>
+
+    <%= text_field_tag :query, nil, class: 'form-control', placeholder: 'Search by Food Truck Name or Type of Food' %>
+
+    <%= submit_tag "Search", class: 'btn btn-success'%>
+
+  <% end %>
+</div>
+
+<hr>

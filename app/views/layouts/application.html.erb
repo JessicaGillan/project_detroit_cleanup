@@ -8,7 +8,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body data-no-turbolink="true">
+    <%= render 'shared/logged_out_nav' %>
+
+    <main class="container" id="main_content">
+      <%= render 'shared/flash' %>
+
+      <%= yield %>
+    </main>
   </body>
 </html>

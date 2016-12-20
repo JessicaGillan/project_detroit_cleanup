@@ -40,6 +40,7 @@ gem 'figaro'
 
 gem 'delayed_job_active_record'
 
+gem 'soda-ruby', :require => 'soda'
 
 group :development do
   gem 'better_errors'
