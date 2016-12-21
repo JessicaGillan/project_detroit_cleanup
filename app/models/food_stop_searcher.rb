@@ -48,7 +48,10 @@ class FoodStopSearcher
 
     def self.build_and(*args)
       query = args.inject do |query, arg|
+                query ||= ""
+                
                 next if arg.empty?
+
                 query + " AND " + arg
               end
     end
