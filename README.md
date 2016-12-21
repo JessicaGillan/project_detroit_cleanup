@@ -1,24 +1,8 @@
-# README
+# SF Food Trucks
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app uses SF open data to list food trucks in SF!
 
-Things you may want to cover:
+Search by food truck name or food type,
+and filter by day of the week and time of day.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Deployed here: https://projectdetroitcleanup.herokuapp.com
