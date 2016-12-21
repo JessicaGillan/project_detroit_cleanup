@@ -1,5 +1,10 @@
 <%= render 'shared/truck_search_bar' %>
 
-<% @food_stops.each do |food_stop| %>
-  <%= render partial: 'food_stop', locals: { food_stop: food_stop } %>
+<% if @food_stops.empty? %>
+  <h3>No Food Found. =( Try again with a broader search.</h3>
+<% else %>
+  <% @food_stops.each do |food_stop| %>
+    <%= render partial: 'food_stop', locals: { food_stop: food_stop } %>
+  <% end %>
+
 <% end %>

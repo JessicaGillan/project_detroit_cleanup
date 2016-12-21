@@ -5,7 +5,7 @@ class FoodStopSearcher
   DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
   TIMES = ["Before 11 AM", "11 AM - 2 PM", "2 PM - 4 PM", "After 4 PM"]
 
-  DEFAULT_LIMIT = 10
+  DEFAULT_LIMIT = 30
 
   def self.general( limit = DEFAULT_LIMIT )
     client.get(DATASET_ID, limit)
