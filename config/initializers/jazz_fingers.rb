@@ -3,7 +3,7 @@ if defined?(JazzFingers)
   config.colored_prompt = true
   config.awesome_print = true
   config.coolline = false
-  config.application_name = ProjectDetroitCleanup
+  config.application_name = ProjectFoodTrucks
   end
   require 'jazz_fingers/setup'
 end
