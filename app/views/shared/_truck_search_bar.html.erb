@@ -1,7 +1,25 @@
-<div class="row">
-  <%= form_tag food_stops_path, class: 'col-xs-12' do %>
+<div class="row search-bar">
+  <%= form_tag food_stops_path, method: :get, class: 'col-xs-12' do %>
 
     <%= text_field_tag :query, nil, class: 'form-control', placeholder: 'Search by Food Truck Name or Type of Food' %>
+
+    <div>
+      Filter by day:
+
+      <% FoodStopSearcher::DAYS.each_with_index do |d| %>
+        <%= check_box_tag("days[]", d ) %>
+        <%= d %>
+      <% end %>
+    </div>
+
+    <div>
+      Filter by time:
+
+      <% FoodStopSearcher::TIMES.each_with_index do |t, index| %>
+        <%= check_box_tag("times[]", index ) %>
+        <%= t %>
+      <% end %>
+    </div>
 
     <%= submit_tag "Search", class: 'btn btn-success'%>
 
