@@ -47,7 +47,15 @@ class FoodStopSearcher
     end
 
     def self.build_and(*args)
-      args.inject { |q, a| q.empty? ? a : (q + " AND " + a) }
+      args.inject do |q, a|
+        if q.empty?
+          a
+        elsif a.empty?
+          q
+        else
+          (q + " AND " + a)
+        end
+      end
     end
 
     def self.build_time_query( times )
