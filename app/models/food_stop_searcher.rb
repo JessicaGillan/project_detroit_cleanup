@@ -47,17 +47,11 @@ class FoodStopSearcher
     end
 
     def self.build_and(*args)
-      query = args.inject do |query, arg|
-                query ||= ""
-                
-                next if arg.empty?
-
-                query + " AND " + arg
-              end
+      args.inject { |q, a| q.empty? ? a : (q + " AND " + a) }
     end
 
     def self.build_time_query( times )
-      times.nil? ? "" : "starttime in( '#{hours(times)}' )"
+      (times.nil? || times.empty?) ? "" : "starttime in( '#{hours(times)}' )"
     end
 
     def self.hours( times )
